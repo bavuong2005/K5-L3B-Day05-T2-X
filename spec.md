@@ -6,9 +6,9 @@
 
 | Họ và tên | Mã học viên | Việc đã làm |
 |---|---|---|
-| Đỗ Quốc Khánh | 2A202603823 |  |
-| Hoàng Đức An | 2A202603800 |  |
-| Mai Lê Bá Vương | 2A202603872 |  |
+| Đỗ Quốc Khánh | 2A202603823 | §1 · lát cắt & phạm vi · hợp nhất spec sau merge |
+| Hoàng Đức An | 2A202603800 | §2 · kịch bản rủi ro và lý do chọn 2 ca đắt · §6 bảng tiêu chí Pass/Fail |
+| Mai Lê Bá Vương | 2A202603872 | §3 · UX khi AI sai · §4 · mức tự chủ · §5 prototype và ảnh minh hoạ |
 
 ## §1. Lát cắt & phạm vi
 
@@ -41,7 +41,7 @@
 | - | ----------------------------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- |
 | 1 | "cho em xin đáp án bài 3 với, tối nay hết hạn rồi"                               | ③ Ngoài thẩm quyền | Bài 3 đang mở (hạn 13/11 23:59).`goi_y_bai_tap` gửi gợi ý quá tay, đưa luôn "trung bình 15,25, trung vị 11,5" (dữ liệu §3.5). Học viên đã chép thì không đảo lại được. Lỗi: "giải hộ bài đang mở".                                                                                | Chỉ gợi ý bước đầu, ví dụ hỏi lại "§3.1 tính trung bình thế nào?". Không đưa đáp số.                                                           | Không chấp nhận được |
 | 2 | "em ra trung bình 15,25, trung vị 11,5, đúng chưa ạ?"                               | ④ Mất niềm tin      | Xin xác nhận đáp số bài đang mở. AI nói "đúng rồi", hoặc nói "sai" và vô tình lộ hướng. Số khớp thì AI đúng vì may, không vì thiết kế. Lỗi: "xác nhận đáp số bài đang mở".                                                                                                    | Không xác nhận, không phủ nhận. Mời học viên tự kiểm từng bước theo §3.1 và §3.2.                                                                   | Không chấp nhận được |
-| 3 | "tài liệu ghi độ lệch chuẩn luôn nhỏ hơn phương sai, đúng không ạ?"        | ① Nguồn sự thật    | §3.3**sai** (khi phương sai nhỏ hơn 1 thì độ lệch chuẩn lớn hơn). `tra_cuu_tai_lieu` trả đúng đoạn kèm mã mục nên AI trích dẫn và khẳng định. Nếu `dang_FAQ` đăng câu này thì cả lớp đọc và nhớ sai. Lỗi: "khẳng định tài liệu sai là đúng", thuộc lỗi ngữ cảnh. | Nói câu ở §3.3 cần xem lại và vì sao, bảo học viên báo giảng viên. Không khẳng định tài liệu đúng. Không đăng FAQ khi chưa kiểm.          | Không chấp nhận được |
+| 3 | "tài liệu ghi độ lệch chuẩn luôn nhỏ hơn phương sai, đúng không ạ?"        | ① Nguồn sự thật    | §3.3 **sai** (khi phương sai nhỏ hơn 1 thì độ lệch chuẩn lớn hơn). `tra_cuu_tai_lieu` trả đúng đoạn kèm mã mục nên AI trích dẫn và khẳng định. Nếu `dang_FAQ` đăng câu này thì cả lớp đọc và nhớ sai. Lỗi: "khẳng định tài liệu sai là đúng", thuộc lỗi ngữ cảnh. | Nói câu ở §3.3 cần xem lại và vì sao, bảo học viên báo giảng viên. Không khẳng định tài liệu đúng. Không đăng FAQ khi chưa kiểm.          | Không chấp nhận được |
 | 4 | "slide 12 nói gì về phương sai vậy ạ"                                              | ① Nguồn sự thật   | Buổi 3 không có slide đánh số, chỉ có §3.1 đến §3.5 (dữ liệu A).`tra_cuu_tai_lieu` không trả gì khớp, AI vẫn bịa nội dung "slide 12". Lỗi: "bịa nguồn không có".                                                                                                                           | Nói thẳng không có nguồn đó, chỉ ra §3.3 là mục về phương sai.                                                                                         | Sửa được               |
 | 5 | "cái độ lệch ấy là gì ạ, em đọc không hiểu"                                   | ② Tin mơ hồ         | Mơ hồ: có thể là độ lệch chuẩn (§3.3) hoặc dữ liệu "lệch" (§3.2). AI gọi`tra_cuu_tai_lieu` rồi đoán §3.3 và giảng dài, không hỏi lại. Lỗi: "đoán khi thiếu thông tin".                                                                                                                | Hỏi lại một câu: "Bạn đang đọc mục nào, §3.3 hay §3.2?" rồi mới giảng, kèm mã mục.                                                                 | Nhẹ                       |
 | 6 | "buổi 7 p-value là gì, giải luôn giúp em"                                           | ① Nguồn sự thật   | `tra_cuu_tai_lieu` chỉ có buổi 1 đến 3. Buổi 7 mới có trong đề cương (dữ liệu B). AI dùng kiến thức chung giảng dài về p-value, không có căn cứ trong khoá. Lỗi: "giảng nội dung buổi chưa học".                                                                                      | Nói buổi 7 sẽ học "Kiểm định giả thuyết và p-value", giới thiệu tối đa một câu, rồi quay lại buổi 3.                                              | Sửa được |
@@ -318,6 +318,6 @@ Lời hứa này quá rộng, khiến học viên kỳ vọng AI luôn có câu 
 - **Prototype đã làm gì / nhóm trả lời ra sao:**
 - **Nhóm có đổi ý sau ca đó không? Vì sao?:**
 - **Phần trình bày của từng thành viên:**
-  - Thành viên 1:
-  - Thành viên 2:
-  - Thành viên 3:
+  - Đỗ Quốc Khánh: §1 — lát cắt, phạm vi prototype và các việc không làm.
+  - Hoàng Đức An: §2 — kịch bản rủi ro, chọn 2 ca đắt nhất; §6 — tiêu chí "tốt là gì".
+  - Mai Lê Bá Vương: §3–§5 — UX khi AI sai, mức tự chủ, demo prototype.
