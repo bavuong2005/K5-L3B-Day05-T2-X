@@ -20,13 +20,14 @@
   3. Nút gửi TA, chặn đăng FAQ và hoàn tác ticket thể hiện giới hạn hành động.
 - **Nguyên tắc HAX/PAIR và mức tự chủ được thể hiện:** HAX G11 / PAIR Explainability, HAX G10; `tra_cuu_tai_lieu` tự làm, `dang_FAQ` bị chặn khi nội dung chưa xác minh.
 
-### Ảnh 2 — TA ngoài giờ (cần chụp)
+### Ảnh 2 — TA ngoài giờ trước hạn nộp
 
-- **Ảnh:** [thêm ảnh sau khi dựng prototype]
+- **Ảnh:** ![Ảnh 2: Giờ TA, hạn bài 3, ticket trong hàng đợi và nút xem gợi ý](anh-2-ta-ngoai-gio.png)
 - **Các số chú thích và ý nghĩa:**
-  1. 
-  2. 
-- **Nguyên tắc HAX/PAIR và mức tự chủ được thể hiện:**
+  1. Đồng hồ 22:40, hạn 23:59 và giờ TA 08:00–22:00 cho thấy TA đã hết giờ trước hạn nộp.
+  2. Ticket trong hàng đợi ghi thời gian nhận hỗ trợ từ 08:00 sáng mai.
+  3. Nút xem gợi ý bước 1 chỉ mở nội dung khi học viên chọn, không đưa đáp số bài đang mở.
+- **Nguyên tắc HAX/PAIR và mức tự chủ được thể hiện:** HAX G2, G11 / PAIR Graceful Failure; `chuyen_TA` mô phỏng hàng đợi, `goi_y_bai_tap` cần học viên chọn xem.
 
 ## Luồng đề xuất từ kịch bản #3 và #8
 

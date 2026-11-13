@@ -292,11 +292,15 @@ Lời hứa này quá rộng, khiến học viên kỳ vọng AI luôn có câu 
 | Ảnh / số chú thích | Nội dung thể hiện | Nguyên tắc HAX/PAIR | Mức tự chủ |
 |---|---|---|---|
 | [Ảnh 1 — ca §3.3](prototype/anh-1-tai-lieu-sai-sec3-3.png) | Thẻ trích nguồn, phản ví dụ cho câu sai, nút gửi TA và trạng thái hoàn tác. | HAX G11 / PAIR Explainability; HAX G10 về giới hạn xác nhận. | `tra_cuu_tai_lieu` tự làm; chặn `dang_FAQ` cho nội dung chưa xác minh. |
-| 2 — ca TA ngoài giờ | Giờ TA 08:00–22:00, hạn bài 3, ticket mô phỏng với nút hoàn tác và lựa chọn xem gợi ý bước đầu. | HAX G2, G11 / PAIR Graceful Failure. | `chuyen_TA` tự làm và mô phỏng hoàn tác 10 giây; `goi_y_bai_tap` chỉ hiển thị khi học viên chọn. |
+| [Ảnh 2 — ca TA ngoài giờ](prototype/anh-2-ta-ngoai-gio.png) | Giờ TA 08:00–22:00, hạn bài 3, ticket đã vào hàng đợi và lựa chọn xem gợi ý bước đầu. | HAX G2, G11 / PAIR Graceful Failure. | `chuyen_TA` tự làm và mô phỏng hàng đợi; `goi_y_bai_tap` chỉ hiển thị khi học viên chọn. |
 
 **Ảnh 1 — Cảnh báo tài liệu §3.3 sai**
 
 ![Ảnh 1: Prototype cảnh báo câu sai trong tài liệu §3.3, nêu phản ví dụ và cho chuyển TA](prototype/anh-1-tai-lieu-sai-sec3-3.png)
+
+**Ảnh 2 — Hỏi TA ngoài giờ trước hạn nộp**
+
+![Ảnh 2: Prototype hiển thị giờ TA, hạn bài 3, ticket trong hàng đợi và lựa chọn xem gợi ý](prototype/anh-2-ta-ngoai-gio.png)
 
 ## §6. Tốt là gì
 
