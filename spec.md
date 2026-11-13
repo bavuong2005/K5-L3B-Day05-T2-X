@@ -12,11 +12,25 @@
 
 ## §1. Lát cắt & phạm vi
 
-- **Lát cắt (chép từ track):**
-- **Ba việc tính năng không làm:**
-  1. 
-  2. 
-  3. 
+**Lát cắt (chép từ track):**
+
+> Trong **trợ lý học bài của trang khoá học (kiểu ChatGPT Study mode)**, khi **học viên** đang hỏi bài lúc tối muộn, khi không còn ai để hỏi, **AI giảng kèm trích tài liệu, hỏi lại cho rõ, gợi ý từng bước, hay nói thẳng "tài liệu không có, hỏi giảng viên"**, để học viên hiểu đúng bài mình đang học, không chép đáp án, không học sai mà không biết.
+
+- **Một người dùng:** học viên khoá "Nhập môn phân tích dữ liệu", đang học buổi 3.
+- **Một việc:** hỏi bài lúc tối muộn, khi không còn ai để hỏi.
+- **Một quyết định của AI:** giảng kèm trích tài liệu · hỏi lại cho rõ · gợi ý từng bước · hay nói "tài liệu không có, hỏi giảng viên".
+- **Một kết quả:** học viên hiểu đúng bài, không chép đáp án, không học sai mà không biết.
+
+**Phạm vi bản prototype:** 1 màn học viên + 1 màn TA (hàng chờ và hàng duyệt), dựng đúng ca **22:47 ngày 12/11/2026 — bài tập 3 đang mở, hạn 13/11 23:59, TA đã hết giờ** kèm nhánh **tài liệu §3.3 có câu sai**. Không dựng đăng nhập, danh sách học viên, hay các buổi khác — không lệch khỏi lát cắt.
+
+**Ba việc tính năng KHÔNG làm:**
+
+1. **Không chấm bài, không chốt điểm, không xác nhận đáp số bài đang mở** — AI không phải giảng viên; chốt sai một con số thì học viên nộp sai mà tin là đúng, và đã đọc thì không đảo lại được (kịch bản #7, #8, #13 ở §2).
+2. **Không dạy trước nội dung buổi chưa học (buổi 4–10)** — đề cương trên trang khoá học chỉ có tên buổi, chưa có tài liệu; dạy trước là bịa nội dung không có nguồn (kịch bản #2).
+3. **Không tự sửa tài liệu, không tự đăng FAQ công khai** — sửa tài liệu là đổi nguồn sự thật cho cả lớp; FAQ nhiều người đã đọc trước khi gỡ kịp; cả hai phải qua người (giảng viên / TA) duyệt (kịch bản #3, #9).
+4. **Không dạy công cụ ngoài chương trình (Excel…)** — tài liệu khoá chỉ ghi "bài tập làm bằng bảng tính", không có tên hàm nào; không có nguồn mà dạy là bịa (kịch bản #11).
+5. **Không nhận xét năng lực học viên** — một câu đánh giá sai ("em yếu phần này") đúng lúc học viên mười giờ tối cần giúp thì học viên bỏ học; đánh giá là việc của giảng viên (kịch bản #10).
+
 
 ## §2. Kịch bản rủi ro
 
