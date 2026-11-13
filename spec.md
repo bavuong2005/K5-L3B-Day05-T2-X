@@ -8,7 +8,8 @@
 |---|---|---|
 | Hoàng Đức An | 2A202603800 |  |
 | Mai Lê Bá Vương | 2A202603872 |  |
-|  |  |  |
+| Đỗ Quốc Khánh |  |  |
+| Vương Quang Thắng |  |  |
 
 ## §1. Lát cắt & phạm vi
 
