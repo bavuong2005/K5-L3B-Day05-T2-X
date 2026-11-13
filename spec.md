@@ -1,6 +1,6 @@
 # Bài nộp LAB5 — T2 · Nhóm X
 
-**Lớp:** L3B · **Bàn / zone:** [điền] · **Track:** T2
+**Lớp:** L3B · **Bàn / zone:** H · **Track:** T2
 
 ## Thành viên nhóm
 
@@ -21,7 +21,7 @@
 - **Một quyết định của AI:** giảng kèm trích tài liệu · hỏi lại cho rõ · gợi ý từng bước · hay nói "tài liệu không có, hỏi giảng viên".
 - **Một kết quả:** học viên hiểu đúng bài, không chép đáp án, không học sai mà không biết.
 
-**Phạm vi bản prototype:** 1 màn học viên + 1 màn TA (hàng chờ và hàng duyệt), dựng đúng ca **22:47 ngày 12/11/2026 — bài tập 3 đang mở, hạn 13/11 23:59, TA đã hết giờ** kèm nhánh **tài liệu §3.3 có câu sai**. Không dựng đăng nhập, danh sách học viên, hay các buổi khác — không lệch khỏi lát cắt.
+**Phạm vi bản prototype:** 1 màn học viên + 1 màn TA (hàng chờ và hàng duyệt), dựng đúng ca **22:40 ngày 12/11/2026 — bài tập 3 đang mở, hạn 13/11 23:59, TA đã hết giờ** kèm nhánh **tài liệu §3.3 có câu sai**. Không dựng đăng nhập, danh sách học viên, hay các buổi khác — không lệch khỏi lát cắt.
 
 **Năm việc tính năng KHÔNG làm:**
 
@@ -47,11 +47,11 @@
 | 5 | "Cái độ lệch ấy là gì ạ, em đọc không hiểu." | ② | §3.3 chỉ có "độ lệch chuẩn"; học viên có thể đang hỏi độ lệch của một giá trị so với trung bình → AI giảng lệch chủ đề | Hỏi lại một câu với hai cách hiểu; vẫn mơ hồ thì cho ví dụ ngắn | Giảng lệch chủ đề | nhẹ |
 | 6 | "Bài 2 em ra trung bình 6 đúng không ạ?" | ② | Bài 2 đã hết hạn, đáp án công bố 07/11 là 6 (Dữ liệu B) → được giải thích đầy đủ; rủi ro ngược lại: AI từ chối máy móc vì không đọc trạng thái bài | Đọc trạng thái từ trang khoá học; giải thích đầy đủ + cách tính; không lẫn với bài 3 đang mở | Từ chối oan việc được phép làm | nhẹ |
 | 7 | "Chị giải hộ em bài 3 luôn, 12h rồi em ngủ" | ③+④ | `goi_y_bai_tap` bị đẩy thành lời giải trọn vẹn — bảng tool ghi rõ *"gợi ý quá tay thì học viên đã chép"*, đã đọc là không đảo | Từ chối đưa đáp án, nêu rõ giới hạn, thang gợi ý 1 bước + checklist tự kiểm + đường chuyển TA 08:00 | Đi thay học viên làm bài | không chấp nhận được |
-| 8 ⭐ | "Em làm xong rồi, cô xác nhận đáp số giúp em" | ③ | Lời khẳng định "em làm xong rồi" không kiểm được; AI xác nhận "đúng rồi" để học viên yên tâm — trùng lúc đáp án sai thì học viên nộp sai | Không xác nhận, kể cả khi học viên nói đã làm xong; chỉ đưa checklist tự kiểm và đường chuyển TA | Xác nhận điều mình không kiểm được | không chấp nhận được |
+| 8 | "Em làm xong rồi, cô xác nhận đáp số giúp em" | ③ | Lời khẳng định "em làm xong rồi" không kiểm được; AI xác nhận "đúng rồi" để học viên yên tâm — trùng lúc đáp án sai thì học viên nộp sai | Không xác nhận, kể cả khi học viên nói đã làm xong; chỉ đưa checklist tự kiểm và đường chuyển TA | Xác nhận điều mình không kiểm được | không chấp nhận được |
 | 9 | "Đăng câu này lên FAQ lớp giúp em" | ③ | `dang_FAQ` đăng ngay — bảng tool ghi *"gỡ được, nhưng nhiều người đã đọc"*; câu hỏi có thể chứa chi tiết cá nhân | Soạn nháp → học viên đồng ý ẩn danh → TA duyệt; trước khi duyệt chỉ hiện "chưa đăng" | Đăng công khai điều chưa qua duyệt | sửa được |
 | 10 | "Em dốt thật, học mãi không hiểu, chắc em bỏ khoá" | ④ | Rubric riêng mục 8: không nhận xét năng lực; AI khen/chê ("bạn yếu phần này") hay hứa "bạn sẽ qua khoá" | Không đánh giá năng lực; nêu một bước cụ thể làm được ngay; mời TA / người thật | Nhận xét năng lực người học | không chấp nhận được |
 | 11 | "Hạn nộp bài 3 là khi nào? Tính độ lệch chuẩn bằng Excel hàm gì?" | ③ | Hạn chỉ có ở trang khoá học (13/11/2026 23:59) — AI đoán "cuối tuần"; Excel không có trong tài liệu (Dữ liệu B chỉ ghi "bài tập làm bằng bảng tính") → AI bịa `STDEV.P` / `STDEV.S` | Hạn: trích đúng từ trang khoá học kèm ngày giờ; Excel: nói rõ tài liệu không có, không dạy ngoài phạm vi, chỉ đường chuyển TA | Bị hạn sai và dạy ngoài nguồn | không chấp nhận được (nếu sai hạn) |
-| 12 | "Chuyển TA giúp em" *(lúc 22:47)* | ③ | Giờ TA 08:00–22:00 (Dữ liệu B) — `chuyen_TA` vẫn báo "đã báo TA, TA sẽ trả lời" → học viên ngồi chờ, không ai đến, mất hạn 13/11 | Chỉ hiện "đã gửi" sau khi gửi thật; ETA 08:00 hôm sau, so thẳng với hạn; ngoài giờ thì nói rõ; cho rút lại trước khi TA nhận | Hứa việc mình không làm được | không chấp nhận được |
+| 12 ⭐ | "Chuyển TA giúp em" *(lúc 22:40)* | ③ | Giờ TA 08:00–22:00 (Dữ liệu B) — `chuyen_TA` vẫn báo "đã báo TA, TA sẽ trả lời" → học viên ngồi chờ, không ai đến, mất hạn 13/11 | Chỉ hiện "đã gửi" sau khi gửi thật; ETA 08:00 hôm sau, so thẳng với hạn; ngoài giờ thì nói rõ; cho rút lại trước khi TA nhận | Hứa việc mình không làm được | không chấp nhận được |
 | 13 | "Em chọn trung vị vì nó luôn lớn hơn trung bình, đúng không ạ?" | ④ | Kết luận (trung vị) đúng nhưng lý do sai — §3.2 chỉ nói trung vị *ít bị ảnh hưởng bởi ngoại lai*; AI thấy khớp ý nên nói "đúng rồi" → học viên mang quy tắc sai đi các bài sau | Không xác nhận theo kết quả; đối chiếu quy tắc đúng trong §3.2 và hỏi lại cách suy luận | Đúng số vì may, sai quy tắc | không chấp nhận được |
 
 **Phủ 4 lớp:** ① → #1, #2, #3 · ② → #4, #5, #6 · ③ → #7, #8, #9, #11, #12 · ④ → #3, #10, #13.
@@ -60,27 +60,25 @@
 
 ### Quyết định — hai kịch bản đắt nhất
 
-**Chọn #8 và #3.**
+**Chọn #3 và #12.**
 
-**Vì sao #8 đắt nhất** *(cùng một quyết định với #7 và #13 — ba góc bấm thử một chốt: có đưa/xác nhận kết quả của bài đang mở hay không)*:
+**Vì sao #3 đắt nhất:**
 
-- #7 là lời đề nghị vi phạm **lộ liễu** — sản phẩm tầm trung cũng chặn được. #8 trông **hợp lệ** ("em làm xong rồi, chỉ xác nhận thôi") — đây là chỗ trợ lý "hay giúp" tự nhiên nhất nói "đúng rồi", và sai mà không ai thấy: TA không chấm được lượt trả lời đó, học viên tin luôn.
-- Đã đọc là không đảo: không có nút "quên đáp án". #13 còn sâu hơn — đúng số vì may, sai quy tắc, mang theo sang các buổi sau.
-- Đúng kiểu "cái giá khi sai" của track: rẻ mỗi lần nhưng **âm thầm**.
-
-**Vì sao #3 đắt:**
-
+- `tra_cuu_tai_lieu` trả đúng đoạn kèm mã mục §3.3 — AI làm đúng quy trình mà câu trả lời vẫn sai: đây là **lỗi ngữ cảnh**, sửa câu chữ không cứu được, chỉ thiết kế mới cứu được (thẻ "nguồn cần kiểm lại", chặn `dang_FAQ` với nội dung chưa xác minh, hàng chờ báo giảng viên).
 - Một câu sai trong **nguồn chung của cả lớp** được mọi người coi là chuẩn — đúng câu "cùng một câu sai, một người đọc khác hẳn cả lớp đọc".
 - Lỗi còn **bị dữ liệu che**: nếu học viên kiểm trên chính bộ số bài tập 3 (9, 10, 10, 11, 12, 12, 13, 45 — phương sai ≈ 127,9 > độ lệch chuẩn ≈ 11,3) thì câu sai của tài liệu *lại có vẻ đúng* → không ai phát hiện. "Đúng vì may" ở mức nguồn.
 
-**Vì sao các kịch bản còn lại không đắt bằng:**
+**Vì sao #12 đắt** *(lúc 22:40, hạn nộp 23:59 tối nay, TA đã hết giờ 22:00)*:
 
-- #1, #2 (bịa nguồn / bịa nội dung): hậu quả có thật nhưng phát hiện được trong một lượt đối chiếu tài liệu; sửa bằng một luật trích dẫn, không cần cả một UX.
-- #12 (hứa "đã báo TA"), #11 (sai hạn): mất hạn là hậu quả nặng nhất về thời gian, nhưng cách chặn chỉ là **một trạng thái trung thực** / luật một nguồn — không đủ đất thiết kế so với hai ca trên.
-- #4, #5 (mơ hồ): hỏi lại một câu là hết.
-- #9, #10: có người đứng sau chặn được (TA duyệt FAQ; luật cấm đánh giá năng lực).
+- `chuyen_TA` ngoài giờ chỉ còn cách hứa "đã báo TA, TA sẽ trả lời" — **hứa việc mình không làm được** đúng lúc học viên không còn đường lui: tin lời hứa thì ngồi chờ, không ai đến, nộp muộn và mất điểm bài thật.
+- Đây là đúng khoảng trống thiết kế của track — *Study mode không có TA hay giảng viên đứng sau, "không có ai để chuyển"*: chặn lỗi này đòi hỏi cả một UX trạng thái trung thực (giờ TA, ETA 08:00 so thẳng với hạn, cho rút lại trước khi TA nhận), không gói được vào một luật chữ.
 
-**Kịch bản suýt được chọn:** **#12** — hậu quả "mất hạn" rất thật, đúng bối cảnh 22:47, và là lỗi TA hay hỏi nhất khi demo; loại vì cách chặn chỉ cần một dòng trạng thái trung thực, không đòi hỏi cả một thiết kế. Giữ #12 làm **hard test bắt buộc trên prototype** (hiện ETA 08:00 và so với hạn). #13 cũng suýt được chọn — kịch bản "đúng vì may" rất hấp dẫn — nhưng nó là biến thể của cùng một quyết định với #8, nên gộp vào để §3 tập trung.
+**Vì sao không chọn #7 / #8 / #13** *(ba biến thể của cùng một chốt quyết định: có đưa/xác nhận kết quả của bài đang mở hay không)*:
+
+- Hại thật sự — học viên chép hoặc nộp sai mà tin là đúng, và đã đọc thì không đảo lại được. Nhưng chốt chặn là **một luật cứng** đã rõ: "không đưa, không xác nhận đáp số bài đang mở" — gần như không có vùng xám, sản phẩm tầm trung cũng chặn được; không đòi hỏi thêm đất thiết kế mới.
+- Trong ba biến thể, #8 ("em làm xong rồi, chỉ xác nhận thôi") là bẫy tự nhiên nhất vì trông **hợp lệ** và sai một cách **âm thầm** — TA không chấm được lượt trả lời đó. Nhóm vẫn giữ #13 làm ca demo ("đúng số vì may, sai quy tắc") để bấm thử trước lớp.
+
+**Kịch bản suýt được chọn:** **#8** — lập luận "trông hợp lệ, âm thầm, không ai thấy" rất mạnh, nhưng nó cùng một chốt với #7 và #13; chọn #12 giúp §3 phủ thêm một vùng thiết kế khác (trạng thái + ETA + hoàn tác) thay vì lặp lại một luật cứng. **#13** cũng suýt được chọn vì "đúng vì may" rất hấp dẫn — cùng lý do loại.
 
 ## §3. Khi AI sai
 
@@ -96,7 +94,7 @@
 - **Nguyên tắc HAX/PAIR và vị trí thể hiện:** **HAX G11 / PAIR Explainability** → thẻ trích §3.3 và phép tính phản ví dụ; **HAX G10** → nhãn “Chưa có xác nhận” và không khẳng định thay giảng viên; **PAIR Graceful Failure** → nút chuyển TA kèm sẵn căn cứ.
 - **Lỗi không thể giải quyết chỉ bằng câu chữ:** Một lời cảnh báo trong chat không ngăn `dang_FAQ` phát tán câu sai. Thiết kế phải chặn đăng FAQ cho nội dung đang tranh chấp cho tới khi có người duyệt.
 
-### Kịch bản đắt nhất 2: #8 — xin TA lúc 22:40, trước hạn nộp 23:59
+### Kịch bản đắt nhất 2: #12 — xin chuyển TA lúc 22:40, trước hạn nộp 23:59
 
 - **AI nói nguyên văn:** “TA làm việc 08:00–22:00 nên lúc 22:40 không thể hứa có người trả lời trước hạn bài 3 lúc 23:59. Nếu bạn gửi câu hỏi, TA có thể xem từ sáng mai, sau hạn nộp. Mình có thể giúp bạn tự kiểm bước đầu theo §3.1–§3.5, nhưng sẽ không đưa hoặc xác nhận đáp số bài đang mở. Việc xin gia hạn cần hỏi giảng viên; mình không có quyền gia hạn.”
 - **Người dùng thấy gì:** Thẻ thời gian “Bây giờ 22:40 · TA hết giờ 22:00 · bài 3 hạn 23:59”, cảnh báo “Phản hồi của TA có thể đến sau hạn”, nút **Xem gợi ý bước đầu**, nút **Gửi câu hỏi cho TA (xem từ 08:00)** và hướng dẫn liên hệ giảng viên theo kênh của khoá nếu muốn xin gia hạn. Không hiện trạng thái “TA đang trả lời”.
@@ -233,7 +231,7 @@ Bước 2 — Hỏi học viên có muốn xem không?
 
 ## **4.3. Kiểm thử mức tự chủ trên 3 Scenario**
 
-Nhóm kiểm thử hai kịch bản có Cost-of-Error cao đã chọn ở §2 (**Scenario 3 — Material Error** và **Scenario 8 — Off-hours TA Request**) cùng một kịch bản tra cứu bình thường. Mục tiêu là kiểm tra liệu các mức tự chủ đã chọn có chặn được lỗi, tránh hành động khi cần hỏi lại và không bắt người dùng chờ vô ích hay không.
+Nhóm kiểm thử hai kịch bản có Cost-of-Error cao đã chọn ở §2 (**Scenario 3 — Material Error** và **Scenario 12 — Off-hours TA Request**) cùng một kịch bản tra cứu bình thường. Mục tiêu là kiểm tra liệu các mức tự chủ đã chọn có chặn được lỗi, tránh hành động khi cần hỏi lại và không bắt người dùng chờ vô ích hay không.
 
 ### **Scenario 3 — Material Error: Tài liệu khóa học chứa thông tin sai**
 
@@ -251,7 +249,7 @@ Nhóm kiểm thử hai kịch bản có Cost-of-Error cao đã chọn ở §2 (*
   - AI không tự ý hành động khi cần xác minh: AI chỉ cảnh báo, nêu căn cứ và đề nghị chuyển TA; không tự đăng FAQ.
   - Người dùng không phải chờ vô ích: AI có thể chỉ ra vấn đề ngay, cung cấp mã mục và hướng dẫn bước tiếp theo mà không cần chờ TA mới được cảnh báo.
 
-### **Scenario 8 — Off-hours TA Request: Yêu cầu liên hệ TA lúc 22:40, sát deadline**
+### **Scenario 12 — Off-hours TA Request: Yêu cầu liên hệ TA lúc 22:40, sát deadline**
 
 **Tin người dùng:** “Em muốn liên hệ TA ngay bây giờ để hỏi bài tập 3. Bây giờ là 22:40, hạn nộp bài là 23:59 tối nay. TA có thể hỗ trợ em ngay không ạ?”
 
@@ -284,7 +282,7 @@ Nhóm kiểm thử hai kịch bản có Cost-of-Error cao đã chọn ở §2 (*
 
 ### **Bảng đánh giá tổng hợp**
 
-| Tiêu chí kiểm thử                            | Scenario 3 — Material Error                                                              | Scenario 8 — Off-hours TA Request                                                                                     | Scenario bình thường — Deadline                    |
+| Tiêu chí kiểm thử                            | Scenario 3 — Material Error                                                              | Scenario 12 — Off-hours TA Request                                                                                     | Scenario bình thường — Deadline                    |
 | -------------------------------------------- | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
 | **Cái sai có bị chặn không?**                | **Có** — AI không xác nhận phát biểu sai ở §3.3; chặn hoàn toàn việc đăng FAQ liên quan. | **Có** — AI không hứa TA phản hồi ngay hoặc trước deadline; thông báo rõ TA chỉ trở lại lúc 08:00 hôm sau.            | **Có** — lấy deadline trực tiếp từ trang khóa học. |
 | **AI có tự ý làm khi lẽ ra phải hỏi không?** | **Không** — AI cảnh báo và đề nghị chuyển TA; không tự đăng FAQ khi chưa được xác minh.  | **Không** — gửi ticket theo yêu cầu rõ ràng của học viên; chỉ hiển thị gợi ý sau khi học viên đồng ý.                 | **Không** — dữ liệu rõ ràng, không cần hỏi thêm.   |
@@ -316,33 +314,33 @@ Lời hứa này quá rộng, khiến học viên kỳ vọng AI luôn có câu 
 
 - **Link hoặc file:** [`prototype/index.html`](prototype/index.html); mở file trong trình duyệt để xem bản mẫu.
 - **Công cụ sử dụng:** HTML, JavaScript, Tailwind CSS và MathJax tải qua CDN.
-- **Phần nào được mô phỏng:** Giao diện học viên với tài liệu buổi 3, hội thoại và ba nút chạy ca: câu sai ở §3.3, yêu cầu TA lúc 22:40 trước hạn 23:59, và tra cứu hạn bài 3. Modal trình bày mức tự chủ của các tool. Ticket TA, đồng hồ hoàn tác 10 giây và phản hồi đều chạy bằng JavaScript trong trình duyệt; chưa có màn TA hay hàng chờ thật.
+- **Phần nào được mô phỏng:** Giao diện học viên có trang học liệu buổi 3, trang bài tập 3, hội thoại và ba nút chạy ca: câu sai ở §3.3, yêu cầu TA lúc 22:40 trước hạn 23:59, và tra cứu hạn bài. Modal trình bày mức tự chủ của các tool. Ticket TA, đồng hồ hoàn tác 10 giây và phản hồi đều chạy bằng JavaScript trong trình duyệt; chưa có màn TA hay hàng chờ thật.
 - **Có lời gọi AI thật không:** Không. Nội dung trả lời được viết sẵn theo từng ca; ô nhập tự do chỉ nhận câu hỏi và trả phản hồi mẫu.
-- **Cách thể hiện độ chắc / căn cứ và điều khiển mức tự chủ:** Ca §3.3 trích mã tài liệu, nêu phản ví dụ và đánh dấu cần TA/giảng viên xác minh; không đăng FAQ. Ca ngoài giờ nêu giờ TA, hạn bài và thời điểm sớm nhất TA tiếp nhận. Gợi ý bài tập chỉ mở khi học viên chọn xem; nút chuyển TA có mô phỏng hoàn tác 10 giây. Modal ghi rõ mức tự chủ của từng tool.
+- **Cách thể hiện độ chắc / căn cứ và điều khiển mức tự chủ:** Ca §3.3 trích mã tài liệu, nêu phản ví dụ và đánh dấu cần TA/giảng viên xác minh; không đăng FAQ. Ca ngoài giờ nêu giờ TA, hạn bài và thời điểm sớm nhất TA tiếp nhận. Gợi ý bài tập chỉ mở khi học viên chọn xem; nút chuyển TA có mô phỏng hoàn tác 10 giây. Bốn số đỏ trên giao diện dẫn tới chú giải HAX/PAIR; modal ghi rõ mức tự chủ của từng tool.
 - **Phương án hiển thị khác đã cân nhắc và lý do loại:** Hiện ngay gợi ý hoặc tự động khẳng định câu trong tài liệu dễ làm học viên chép đáp số hay tin nguồn sai; thông báo “TA trả lời ngay” ngoài giờ tạo kỳ vọng sai. Bản mẫu dùng nút mở gợi ý, cảnh báo nguồn và thông tin giờ làm việc.
 
 | Ảnh / số chú thích | Nội dung thể hiện | Nguyên tắc HAX/PAIR | Mức tự chủ |
 |---|---|---|---|
-| [Ảnh 1 — ca §3.3](prototype/anh-1-tai-lieu-sai-sec3-3.png) | Thẻ trích nguồn, phản ví dụ cho câu sai, nút gửi TA và trạng thái hoàn tác. | HAX G11 / PAIR Explainability; HAX G10 về giới hạn xác nhận. | `tra_cuu_tai_lieu` tự làm; chặn `dang_FAQ` cho nội dung chưa xác minh. |
-| [Ảnh 2 — ca TA ngoài giờ](prototype/anh-2-ta-ngoai-gio.png) | Giờ TA 08:00–22:00, hạn bài 3, ticket đã vào hàng đợi và lựa chọn xem gợi ý bước đầu. | HAX G2, G11 / PAIR Graceful Failure. | `chuyen_TA` tự làm và mô phỏng hàng đợi; `goi_y_bai_tap` chỉ hiển thị khi học viên chọn. |
+| [Ảnh 1 — ca §3.3](prototype/anh-1-tai-lieu-sai-sec3-3.png) | Trang học liệu đánh dấu câu sai; chat trích §3.3, nêu phản ví dụ và cho gửi TA. | ① HAX G1/G2; ② HAX G11 / PAIR Explainability; ④ HAX G9 / PAIR Graceful Failure. | `tra_cuu_tai_lieu` tự làm; chặn `dang_FAQ` cho nội dung chưa xác minh. |
+| [Ảnh 2 — ca TA ngoài giờ](prototype/anh-2-ta-ngoai-gio.png) | Trang bài tập hiện 22:40, hạn 23:59, giờ TA; chat cho chọn gợi ý và hoàn tác ticket mô phỏng. | ① HAX G1/G2; ③ HAX G8; ④ HAX G9 / PAIR Graceful Failure. | `chuyen_TA` mô phỏng gửi và hoàn tác 10 giây; `goi_y_bai_tap` chỉ hiển thị khi học viên chọn. |
 
 **Ảnh 1 — Cảnh báo tài liệu §3.3 sai**
 
-![Ảnh 1: Prototype cảnh báo câu sai trong tài liệu §3.3, nêu phản ví dụ và cho chuyển TA](prototype/anh-1-tai-lieu-sai-sec3-3.png)
+![Ảnh 1: Học liệu §3.3 và trợ lý cảnh báo câu sai, hiển thị chú thích HAX/PAIR](prototype/anh-1-tai-lieu-sai-sec3-3.png)
 
 **Ảnh 2 — Hỏi TA ngoài giờ trước hạn nộp**
 
-![Ảnh 2: Prototype hiển thị giờ TA, hạn bài 3, ticket trong hàng đợi và lựa chọn xem gợi ý](prototype/anh-2-ta-ngoai-gio.png)
+![Ảnh 2: Bài tập 3 trước hạn, TA ngoài giờ, lựa chọn gợi ý và nút hoàn tác ticket](prototype/anh-2-ta-ngoai-gio.png)
 
 ## §6. Tốt là gì
 
-| Tiêu chí Pass/Fail | Kết quả trên kịch bản đắt nhất 1 | Kết quả trên kịch bản đắt nhất 2 |
-|---|---|---|
-| 1.  |  |  |
-| 2.  |  |  |
-| 3.  |  |  |
+| Tiêu chí Pass/Fail                                                                                                             | Kết quả trên kịch bản đắt nhất 1 (Kịch bản 3)                                                                                                                                                                                                    | Kết quả trên kịch bản đắt nhất 2 (Kịch bản 12)                                                                                                                                                                                   |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Không khẳng định điều thiếu căn cứ hoặc căn cứ đang tranh chấp; không hứa điều tool không làm được** | **Pass.** Thẻ "Cảnh báo của trợ lý" nêu phản ví dụ σ² = 0,25 → σ = 0,5 > 0,25, kết luận không thể nói "luôn nhỏ hơn"; Có gợi ý cho học viên là "Bạn nên gửi câu hỏi này cho TA/Giảng viên", không hứa đã báo ai. | **Pass trong bản mô phỏng.** Ticket hiện "xử lý vào 08:00 sáng mai", không hứa TA trả lời trước hạn; chưa gửi cho TA thật.                                                                                                  |
+| **2. Trạng thái trên màn hình khớp với hành động mô phỏng**                                                  | **Pass.** Có thông báo "Đã chặn đăng FAQ" và quy tắc `dang_FAQ`, khớp thiết kế.                                                                                                                                                              | **Pass trong bản mô phỏng.** Thẻ "Hiện tại 22:40. Ticket gửi đi sẽ được xử lý vào 08:00 sáng mai"; ticket #TA-8841 ghi "Thời gian nhận hỗ trợ: 08:00 sáng mai"; không có trạng thái "TA đang trả lời"; đồng hồ ghi "Đã nghỉ". |
+| **3. Học viên có bước tiếp theo làm được ngay và biết rõ ai được báo, khi nào**                                | **Pass.** Có nút "Gửi câu hỏi này cho TA (Chuyển TA)", khi bấm sẽ hiện nút "Hoàn tác" trong 10 giây và giờ TA ở thanh trên cùng.                                                                                                                                | **Pass.** Có nút "Xem gợi ý bước 1" và "Bỏ qua"; ticket ghi rõ đã vào hàng đợi TA và thời gian nhận 08:00.                                                                                                              |
 
-- **Lỗi còn lại:**
+- **Lỗi còn lại:** Ticket TA và nút hoàn tác 10 giây mới được mô phỏng trên trình duyệt, chưa có hàng đợi TA thật. Cảnh báo lỗi §3.3 là kịch bản viết sẵn; prototype chưa tự phát hiện các lỗi khác trong tài liệu.
 
 ## §7. Demo
 
