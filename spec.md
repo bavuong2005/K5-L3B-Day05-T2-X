@@ -91,7 +91,7 @@ Ba mức được sử dụng:
 - **Cần người duyệt (Human-in-the-loop):** AI chỉ chuẩn bị hoặc đề xuất; một người được xác định rõ phải xác nhận trước khi hành động có hiệu lực.
 - **Cấm (Forbidden):** AI không được thực hiện hành động đó. Đây có thể là giới hạn đối với một hành vi cụ thể, không nhất thiết cấm toàn bộ tool.
 
-### Bảng tổng hợp
+### **Bảng tổng hợp**
 
 | Tool                                      | Mức tự chủ                                       | Quyết định thiết kế và cơ chế bảo vệ                                                                                                                                                                   |
 | ----------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -103,7 +103,7 @@ Ba mức được sử dụng:
 
 **Lý do bổ sung `tra_cuu_trang_khoa_hoc`:** Dữ liệu Track 2 tách riêng tài liệu buổi học và trang khóa học. `tra_cuu_tai_lieu` chỉ tìm trong tài liệu buổi học; do đó không thể dùng tool này để xác minh hạn nộp, trạng thái bài tập hoặc đáp án chính thức trên trang khóa học. Nhóm đề xuất bổ sung tool đọc riêng này để các câu trả lời về lịch và trạng thái bài tập có căn cứ rõ ràng.
 
-### Phân tích Cost-of-Error cho từng tool
+### **Phân tích Cost-of-Error cho từng tool**
 
 #### 1. `tra_cuu_tai_lieu` — Tự làm
 
@@ -146,6 +146,7 @@ Ba mức được sử dụng:
   - *Tự động đăng:* Loại vì AI có thể biến một câu trả lời chưa được kiểm chứng thành thông tin chính thức mà cả lớp dựa vào.
   - *Cấm toàn bộ tool:* Loại vì FAQ vẫn có giá trị tổng hợp những câu hỏi lặp lại, miễn là có người kiểm tra trước khi công khai.
 - **Quy tắc duyệt:** TA/giảng viên phải thấy câu hỏi, bản nháp trả lời, nguồn và mã mục trước khi duyệt. Nếu phát hiện nội dung nguồn có dấu hiệu sai, AI phải **chặn hoàn toàn việc đăng FAQ liên quan**, không chỉ đơn giản đưa bản nháp vào hàng chờ duyệt. Chỉ xem xét đăng lại sau khi TA/giảng viên xác minh và sửa nội dung. Đây là hàng rào bắt buộc để tránh biến một lỗi trong tài liệu thành thông tin sai được cả lớp tiếp nhận.
+- **Quá hạn duyệt:** Bản nháp luôn hiển thị trạng thái "chưa duyệt" cho học viên; câu trả lời cho chính học viên đó đã nhận trong chat ngay từ đầu nên không ai phải chờ FAQ để được giải đáp. Quá 24 giờ không ai duyệt, hệ thống nhắc TA ngay khi vào ca; quá 48 giờ, bản nháp tự huỷ và học viên được báo. Riêng nội dung đang tranh chấp (như §3.3) thì không có cửa sổ quá hạn — chặn cho đến khi người có thẩm quyền xác minh, không tự huỷ, không tự đăng.
 
 #### 5. `tra_cuu_trang_khoa_hoc` — Tự làm (tool bổ sung)
 
@@ -261,17 +262,17 @@ Nhóm kiểm thử hai kịch bản có Cost-of-Error cao đã chọn ở §2 (*
 
 ### 4.4. Thay đổi lời hứa với người dùng (Shift in Product Promise)
 
-### Lời hứa cũ — All-knowing Auto-solver
+### **Lời hứa cũ — All-knowing Auto-solver**
 
 > “AI sẽ tự động giải đáp mọi thắc mắc và giải bài tập giúp bạn tức thì 24/7.”
 
 Lời hứa này quá rộng, khiến học viên kỳ vọng AI luôn có câu trả lời chính xác và có thể giải mọi bài. Trên thực tế, AI có thể gặp tài liệu chứa thông tin sai, câu hỏi không đủ căn cứ hoặc yêu cầu hỗ trợ ngoài giờ làm việc của TA. Nếu vẫn duy trì lời hứa này, AI có nguy cơ biến lỗi trong tài liệu thành kiến thức sai được xác nhận, hoặc khiến học viên tin rằng TA sẽ hỗ trợ ngay cả khi đã hết giờ.
 
-### Lời hứa mới — Guided, Chaperoned Study Companion
+### **Lời hứa mới — Guided, Chaperoned Study Companion**
 
 > “AI sẽ đồng hành cùng bạn trong quá trình tự học 24/7: tra cứu và trích dẫn tài liệu khóa học, cảnh báo khi phát hiện nội dung có dấu hiệu sai, hỏi lại khi câu hỏi chưa rõ và gợi ý từng bước khi bạn muốn xem. Khi cần hỗ trợ từ con người, AI giúp bạn gửi câu hỏi đến TA và thông báo rõ thời gian tiếp nhận. Với nội dung chia sẻ cho cả lớp, AI chỉ chuẩn bị bản nháp để TA/giảng viên kiểm tra trước khi công khai.”
 
-### Ý nghĩa của sự thay đổi
+### **Ý nghĩa của sự thay đổi**
 
 1. **Từ “AI giải hộ” sang “AI đồng hành và hướng dẫn”:** Gợi ý không thay thế tư duy của học viên. Với bài đang mở, AI không đưa hoặc xác nhận đáp số mà hỗ trợ từng bước để người học tự hoàn thành.
 2. **Từ trả lời theo tài liệu một cách máy móc sang trả lời có kiểm chứng:** AI không mặc nhiên xem mọi nội dung trong tài liệu là đúng. Khi phát hiện phát biểu có dấu hiệu sai như ở §3.3, AI phải cảnh báo, chỉ rõ nguồn và đề nghị TA/giảng viên xác minh.
@@ -319,7 +320,7 @@ Lời hứa này quá rộng, khiến học viên kỳ vọng AI luôn có câu 
 - **Prototype đã làm gì / nhóm trả lời ra sao:** Prototype chưa có nhánh bấm riêng cho câu này, nên nhóm trình bày cách trợ lý sẽ xử lý theo mức tự chủ đã đặt: `tra_cuu_tai_lieu` lấy §3.4, nơi yêu cầu kiểm tra giá trị ngoại lai là lỗi nhập liệu hay dữ liệu thật trước khi bỏ. AI hỏi “Bạn có căn cứ nào cho thấy 45 triệu là lỗi nhập liệu không?”; không bảo bỏ số 45, không xác nhận cách tính hay đáp số để nộp. Nếu học viên muốn trợ giúp, `goi_y_bai_tap` chỉ hiện gợi ý bước đầu khi học viên chọn xem. Nếu học viên yêu cầu chuyển TA, AI nói rõ giờ TA 08:00–22:00 và trạng thái hàng chờ, không hứa phản hồi trước hạn.
 - **Nhóm có đổi ý sau ca đó không? Vì sao?:** Nhóm giữ nguyên mức tự chủ của các tool: tra cứu được tự làm, gợi ý cần học viên chọn xem, còn việc quyết định bỏ dữ liệu không thuộc quyền AI. Nhóm ghi nhận cần bổ sung một nhánh hỏi lại về nguồn gốc giá trị ngoại lai trong prototype để người học không hiểu câu trả lời chung là lời xác nhận cách nộp bài.
 - **Phần trình bày của từng thành viên:**
-  - Đỗ Quốc Khánh: giới thiệu lát cắt, phạm vi và câu hỏi của nhóm khác.
-  - Hoàng Đức An: chỉ ra rủi ro học viên bỏ dữ liệu thật, dẫn §3.4 và bài tập 3 đang mở.
-  - Mai Lê Bá Vương: nói câu AI phản hồi, bước hỏi lại và giới hạn không xác nhận đáp số.
-  - Vương Quang Thắng: giải thích mức tự chủ của `tra_cuu_tai_lieu`, `goi_y_bai_tap`, `chuyen_TA` và thao tác hiện có trên prototype.
+  - Thành viên 1: giới thiệu lát cắt, phạm vi và câu hỏi của nhóm khác.
+  - Thành viên 2: chỉ ra rủi ro học viên bỏ dữ liệu thật, dẫn §3.4 và bài tập 3 đang mở.
+  - Thành viên 3: nói câu AI phản hồi, bước hỏi lại và giới hạn không xác nhận đáp số.
+  - Thành viên 4: giải thích mức tự chủ của `tra_cuu_tai_lieu`, `goi_y_bai_tap`, `chuyen_TA` và thao tác hiện có trên prototype.
