@@ -11,15 +11,16 @@
 
 ## Ảnh minh hoạ
 
-### Ảnh 1 — [Tên màn hình / tình huống]
+### Ảnh 1 — Tài liệu §3.3 sai
 
-- **Ảnh:** [thêm ảnh sau khi dựng prototype]
+- **Ảnh:** ![Ảnh 1: Cảnh báo tài liệu §3.3 sai và chuyển TA](anh-1-tai-lieu-sai-sec3-3.png)
 - **Các số chú thích và ý nghĩa:**
-  1. 
-  2. 
-- **Nguyên tắc HAX/PAIR và mức tự chủ được thể hiện:**
+  1. Mã mục §3.3 và câu sai trong tài liệu giúp học viên đối chiếu nguồn.
+  2. Cảnh báo kèm phản ví dụ chỉ rõ vì sao không thể khẳng định câu đó đúng.
+  3. Nút gửi TA, chặn đăng FAQ và hoàn tác ticket thể hiện giới hạn hành động.
+- **Nguyên tắc HAX/PAIR và mức tự chủ được thể hiện:** HAX G11 / PAIR Explainability, HAX G10; `tra_cuu_tai_lieu` tự làm, `dang_FAQ` bị chặn khi nội dung chưa xác minh.
 
-### Ảnh 2 — [Tuỳ chọn]
+### Ảnh 2 — TA ngoài giờ (cần chụp)
 
 - **Ảnh:** [thêm ảnh sau khi dựng prototype]
 - **Các số chú thích và ý nghĩa:**
