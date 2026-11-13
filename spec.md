@@ -6,10 +6,10 @@
 
 | Họ và tên | Mã học viên | Việc đã làm |
 |---|---|---|
-| Đỗ Quốc Khánh |  | §1 lát cắt và phạm vi; điều phối, rà soát toàn bài; trình bày mở đầu demo §7. |
+| Đỗ Quốc Khánh | 2A202603823 | §1 lát cắt và phạm vi; điều phối, rà soát toàn bài; trình bày mở đầu demo §7. |
 | Hoàng Đức An | 2A202603800 | §2 kịch bản rủi ro và §6 tiêu chí Pass/Fail; trình bày rủi ro trong demo §7. |
 | Mai Lê Bá Vương | 2A202603872 | §3 UX khi AI sai; thiết kế nội dung và thao tác cho prototype §5; trình bày phản hồi AI trong demo §7. |
-| Vương Quang Thắng |  | §4 mức tự chủ; dựng prototype §5; bấm prototype và giải thích mức tự chủ trong demo §7. |
+| Vương Quang Thắng | 2A202603855 | §4 mức tự chủ; dựng prototype §5; bấm prototype và giải thích mức tự chủ trong demo §7. |
 
 ## §1. Lát cắt & phạm vi
 
