@@ -6,9 +6,10 @@
 
 | Họ và tên | Mã học viên | Việc đã làm |
 |---|---|---|
-| Đỗ Quốc Khánh | 2A202603823 | §1 · lát cắt & phạm vi · hợp nhất spec sau merge |
-| Hoàng Đức An | 2A202603800 | §2 · kịch bản rủi ro và lý do chọn 2 ca đắt · §6 bảng tiêu chí Pass/Fail |
-| Mai Lê Bá Vương | 2A202603872 | §3 · UX khi AI sai · §4 · mức tự chủ · §5 prototype và ảnh minh hoạ |
+| Đỗ Quốc Khánh | 2A202603823 | §1 lát cắt và phạm vi; điều phối, rà soát toàn bài; trình bày mở đầu demo §7. |
+| Hoàng Đức An | 2A202603800 | §2 kịch bản rủi ro và §6 tiêu chí Pass/Fail; trình bày rủi ro trong demo §7. |
+| Mai Lê Bá Vương | 2A202603872 | §3 UX khi AI sai; thiết kế nội dung và thao tác cho prototype §5; trình bày phản hồi AI trong demo §7. |
+| Vương Quang Thắng | 2A202603855 | §4 mức tự chủ; dựng prototype §5; bấm prototype và giải thích mức tự chủ trong demo §7. |
 
 ## §1. Lát cắt & phạm vi
 
@@ -90,7 +91,7 @@ Ba mức được sử dụng:
 - **Cần người duyệt (Human-in-the-loop):** AI chỉ chuẩn bị hoặc đề xuất; một người được xác định rõ phải xác nhận trước khi hành động có hiệu lực.
 - **Cấm (Forbidden):** AI không được thực hiện hành động đó. Đây có thể là giới hạn đối với một hành vi cụ thể, không nhất thiết cấm toàn bộ tool.
 
-### **Bảng tổng hợp**
+### Bảng tổng hợp
 
 | Tool                                      | Mức tự chủ                                       | Quyết định thiết kế và cơ chế bảo vệ                                                                                                                                                                   |
 | ----------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -102,7 +103,7 @@ Ba mức được sử dụng:
 
 **Lý do bổ sung `tra_cuu_trang_khoa_hoc`:** Dữ liệu Track 2 tách riêng tài liệu buổi học và trang khóa học. `tra_cuu_tai_lieu` chỉ tìm trong tài liệu buổi học; do đó không thể dùng tool này để xác minh hạn nộp, trạng thái bài tập hoặc đáp án chính thức trên trang khóa học. Nhóm đề xuất bổ sung tool đọc riêng này để các câu trả lời về lịch và trạng thái bài tập có căn cứ rõ ràng.
 
-### **Phân tích Cost-of-Error cho từng tool**
+### Phân tích Cost-of-Error cho từng tool
 
 #### 1. `tra_cuu_tai_lieu` — Tự làm
 
@@ -260,17 +261,17 @@ Nhóm kiểm thử hai kịch bản có Cost-of-Error cao đã chọn ở §2 (*
 
 ### 4.4. Thay đổi lời hứa với người dùng (Shift in Product Promise)
 
-### **Lời hứa cũ — All-knowing Auto-solver**
+### Lời hứa cũ — All-knowing Auto-solver
 
 > “AI sẽ tự động giải đáp mọi thắc mắc và giải bài tập giúp bạn tức thì 24/7.”
 
 Lời hứa này quá rộng, khiến học viên kỳ vọng AI luôn có câu trả lời chính xác và có thể giải mọi bài. Trên thực tế, AI có thể gặp tài liệu chứa thông tin sai, câu hỏi không đủ căn cứ hoặc yêu cầu hỗ trợ ngoài giờ làm việc của TA. Nếu vẫn duy trì lời hứa này, AI có nguy cơ biến lỗi trong tài liệu thành kiến thức sai được xác nhận, hoặc khiến học viên tin rằng TA sẽ hỗ trợ ngay cả khi đã hết giờ.
 
-### **Lời hứa mới — Guided, Chaperoned Study Companion**
+### Lời hứa mới — Guided, Chaperoned Study Companion
 
 > “AI sẽ đồng hành cùng bạn trong quá trình tự học 24/7: tra cứu và trích dẫn tài liệu khóa học, cảnh báo khi phát hiện nội dung có dấu hiệu sai, hỏi lại khi câu hỏi chưa rõ và gợi ý từng bước khi bạn muốn xem. Khi cần hỗ trợ từ con người, AI giúp bạn gửi câu hỏi đến TA và thông báo rõ thời gian tiếp nhận. Với nội dung chia sẻ cho cả lớp, AI chỉ chuẩn bị bản nháp để TA/giảng viên kiểm tra trước khi công khai.”
 
-### **Ý nghĩa của sự thay đổi**
+### Ý nghĩa của sự thay đổi
 
 1. **Từ “AI giải hộ” sang “AI đồng hành và hướng dẫn”:** Gợi ý không thay thế tư duy của học viên. Với bài đang mở, AI không đưa hoặc xác nhận đáp số mà hỗ trợ từng bước để người học tự hoàn thành.
 2. **Từ trả lời theo tài liệu một cách máy móc sang trả lời có kiểm chứng:** AI không mặc nhiên xem mọi nội dung trong tài liệu là đúng. Khi phát hiện phát biểu có dấu hiệu sai như ở §3.3, AI phải cảnh báo, chỉ rõ nguồn và đề nghị TA/giảng viên xác minh.
@@ -314,10 +315,11 @@ Lời hứa này quá rộng, khiến học viên kỳ vọng AI luôn có câu 
 
 ## §7. Demo
 
-- **Ca lạ nhận được:**
-- **Prototype đã làm gì / nhóm trả lời ra sao:**
-- **Nhóm có đổi ý sau ca đó không? Vì sao?:**
+- **Ca lạ nhận được:** “Bài tập 3 có mức lương 45 triệu, khác hẳn các số còn lại. Em bỏ số 45 đi rồi tính để nộp nhé?” Đây là yêu cầu quyết định cách xử lý giá trị ngoại lai trong bài đang mở, ngoài hai ca #3 và #8 đã dựng sẵn.
+- **Prototype đã làm gì / nhóm trả lời ra sao:** Prototype chưa có nhánh bấm riêng cho câu này, nên nhóm trình bày cách trợ lý sẽ xử lý theo mức tự chủ đã đặt: `tra_cuu_tai_lieu` lấy §3.4, nơi yêu cầu kiểm tra giá trị ngoại lai là lỗi nhập liệu hay dữ liệu thật trước khi bỏ. AI hỏi “Bạn có căn cứ nào cho thấy 45 triệu là lỗi nhập liệu không?”; không bảo bỏ số 45, không xác nhận cách tính hay đáp số để nộp. Nếu học viên muốn trợ giúp, `goi_y_bai_tap` chỉ hiện gợi ý bước đầu khi học viên chọn xem. Nếu học viên yêu cầu chuyển TA, AI nói rõ giờ TA 08:00–22:00 và trạng thái hàng chờ, không hứa phản hồi trước hạn.
+- **Nhóm có đổi ý sau ca đó không? Vì sao?:** Nhóm giữ nguyên mức tự chủ của các tool: tra cứu được tự làm, gợi ý cần học viên chọn xem, còn việc quyết định bỏ dữ liệu không thuộc quyền AI. Nhóm ghi nhận cần bổ sung một nhánh hỏi lại về nguồn gốc giá trị ngoại lai trong prototype để người học không hiểu câu trả lời chung là lời xác nhận cách nộp bài.
 - **Phần trình bày của từng thành viên:**
-  - Đỗ Quốc Khánh: §1 — lát cắt, phạm vi prototype và các việc không làm.
-  - Hoàng Đức An: §2 — kịch bản rủi ro, chọn 2 ca đắt nhất; §6 — tiêu chí "tốt là gì".
-  - Mai Lê Bá Vương: §3–§5 — UX khi AI sai, mức tự chủ, demo prototype.
+  - Đỗ Quốc Khánh: giới thiệu lát cắt, phạm vi và câu hỏi của nhóm khác.
+  - Hoàng Đức An: chỉ ra rủi ro học viên bỏ dữ liệu thật, dẫn §3.4 và bài tập 3 đang mở.
+  - Mai Lê Bá Vương: nói câu AI phản hồi, bước hỏi lại và giới hạn không xác nhận đáp số.
+  - Vương Quang Thắng: giải thích mức tự chủ của `tra_cuu_tai_lieu`, `goi_y_bai_tap`, `chuyen_TA` và thao tác hiện có trên prototype.
