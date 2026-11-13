@@ -282,17 +282,17 @@ Lời hứa này quá rộng, khiến học viên kỳ vọng AI luôn có câu 
 
 ## §5. Prototype
 
-- **Link hoặc file:**
-- **Công cụ sử dụng:**
-- **Phần nào được mô phỏng:**
-- **Có lời gọi AI thật không:**
-- **Cách thể hiện độ chắc / căn cứ và điều khiển mức tự chủ:**
-- **Phương án hiển thị khác đã cân nhắc và lý do loại:**
+- **Link hoặc file:** [`prototype/index.html`](prototype/index.html); mở file trong trình duyệt để xem bản mẫu.
+- **Công cụ sử dụng:** HTML, JavaScript, Tailwind CSS và MathJax tải qua CDN.
+- **Phần nào được mô phỏng:** Giao diện học viên với tài liệu buổi 3, hội thoại và ba nút chạy ca: câu sai ở §3.3, yêu cầu TA lúc 22:40 trước hạn 23:59, và tra cứu hạn bài 3. Modal trình bày mức tự chủ của các tool. Ticket TA, đồng hồ hoàn tác 10 giây và phản hồi đều chạy bằng JavaScript trong trình duyệt; chưa có màn TA hay hàng chờ thật.
+- **Có lời gọi AI thật không:** Không. Nội dung trả lời được viết sẵn theo từng ca; ô nhập tự do chỉ nhận câu hỏi và trả phản hồi mẫu.
+- **Cách thể hiện độ chắc / căn cứ và điều khiển mức tự chủ:** Ca §3.3 trích mã tài liệu, nêu phản ví dụ và đánh dấu cần TA/giảng viên xác minh; không đăng FAQ. Ca ngoài giờ nêu giờ TA, hạn bài và thời điểm sớm nhất TA tiếp nhận. Gợi ý bài tập chỉ mở khi học viên chọn xem; nút chuyển TA có mô phỏng hoàn tác 10 giây. Modal ghi rõ mức tự chủ của từng tool.
+- **Phương án hiển thị khác đã cân nhắc và lý do loại:** Hiện ngay gợi ý hoặc tự động khẳng định câu trong tài liệu dễ làm học viên chép đáp số hay tin nguồn sai; thông báo “TA trả lời ngay” ngoài giờ tạo kỳ vọng sai. Bản mẫu dùng nút mở gợi ý, cảnh báo nguồn và thông tin giờ làm việc.
 
 | Ảnh / số chú thích | Nội dung thể hiện | Nguyên tắc HAX/PAIR | Mức tự chủ |
 |---|---|---|---|
-| 1 |  |  |  |
-| 2 |  |  |  |
+| 1 — ca §3.3 | Thẻ trích nguồn, phản ví dụ cho câu sai và lựa chọn gửi câu hỏi cho TA. | HAX G11 / PAIR Explainability; HAX G10 về giới hạn xác nhận. | `tra_cuu_tai_lieu` tự làm; chặn `dang_FAQ` cho nội dung chưa xác minh. |
+| 2 — ca TA ngoài giờ | Giờ TA 08:00–22:00, hạn bài 3, ticket mô phỏng với nút hoàn tác và lựa chọn xem gợi ý bước đầu. | HAX G2, G11 / PAIR Graceful Failure. | `chuyen_TA` tự làm và mô phỏng hoàn tác 10 giây; `goi_y_bai_tap` chỉ hiển thị khi học viên chọn. |
 
 ## §6. Tốt là gì
 
