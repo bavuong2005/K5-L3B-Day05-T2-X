@@ -286,23 +286,23 @@ Lời hứa này quá rộng, khiến học viên kỳ vọng AI luôn có câu 
 
 - **Link hoặc file:** [`prototype/index.html`](prototype/index.html); mở file trong trình duyệt để xem bản mẫu.
 - **Công cụ sử dụng:** HTML, JavaScript, Tailwind CSS và MathJax tải qua CDN.
-- **Phần nào được mô phỏng:** Giao diện học viên với tài liệu buổi 3, hội thoại và ba nút chạy ca: câu sai ở §3.3, yêu cầu TA lúc 22:40 trước hạn 23:59, và tra cứu hạn bài 3. Modal trình bày mức tự chủ của các tool. Ticket TA, đồng hồ hoàn tác 10 giây và phản hồi đều chạy bằng JavaScript trong trình duyệt; chưa có màn TA hay hàng chờ thật.
+- **Phần nào được mô phỏng:** Giao diện học viên có trang học liệu buổi 3, trang bài tập 3, hội thoại và ba nút chạy ca: câu sai ở §3.3, yêu cầu TA lúc 22:40 trước hạn 23:59, và tra cứu hạn bài. Modal trình bày mức tự chủ của các tool. Ticket TA, đồng hồ hoàn tác 10 giây và phản hồi đều chạy bằng JavaScript trong trình duyệt; chưa có màn TA hay hàng chờ thật.
 - **Có lời gọi AI thật không:** Không. Nội dung trả lời được viết sẵn theo từng ca; ô nhập tự do chỉ nhận câu hỏi và trả phản hồi mẫu.
-- **Cách thể hiện độ chắc / căn cứ và điều khiển mức tự chủ:** Ca §3.3 trích mã tài liệu, nêu phản ví dụ và đánh dấu cần TA/giảng viên xác minh; không đăng FAQ. Ca ngoài giờ nêu giờ TA, hạn bài và thời điểm sớm nhất TA tiếp nhận. Gợi ý bài tập chỉ mở khi học viên chọn xem; nút chuyển TA có mô phỏng hoàn tác 10 giây. Modal ghi rõ mức tự chủ của từng tool.
+- **Cách thể hiện độ chắc / căn cứ và điều khiển mức tự chủ:** Ca §3.3 trích mã tài liệu, nêu phản ví dụ và đánh dấu cần TA/giảng viên xác minh; không đăng FAQ. Ca ngoài giờ nêu giờ TA, hạn bài và thời điểm sớm nhất TA tiếp nhận. Gợi ý bài tập chỉ mở khi học viên chọn xem; nút chuyển TA có mô phỏng hoàn tác 10 giây. Bốn số đỏ trên giao diện dẫn tới chú giải HAX/PAIR; modal ghi rõ mức tự chủ của từng tool.
 - **Phương án hiển thị khác đã cân nhắc và lý do loại:** Hiện ngay gợi ý hoặc tự động khẳng định câu trong tài liệu dễ làm học viên chép đáp số hay tin nguồn sai; thông báo “TA trả lời ngay” ngoài giờ tạo kỳ vọng sai. Bản mẫu dùng nút mở gợi ý, cảnh báo nguồn và thông tin giờ làm việc.
 
 | Ảnh / số chú thích | Nội dung thể hiện | Nguyên tắc HAX/PAIR | Mức tự chủ |
 |---|---|---|---|
-| [Ảnh 1 — ca §3.3](prototype/anh-1-tai-lieu-sai-sec3-3.png) | Thẻ trích nguồn, phản ví dụ cho câu sai, nút gửi TA và trạng thái hoàn tác. | HAX G11 / PAIR Explainability; HAX G10 về giới hạn xác nhận. | `tra_cuu_tai_lieu` tự làm; chặn `dang_FAQ` cho nội dung chưa xác minh. |
-| [Ảnh 2 — ca TA ngoài giờ](prototype/anh-2-ta-ngoai-gio.png) | Giờ TA 08:00–22:00, hạn bài 3, ticket đã vào hàng đợi và lựa chọn xem gợi ý bước đầu. | HAX G2, G11 / PAIR Graceful Failure. | `chuyen_TA` tự làm và mô phỏng hàng đợi; `goi_y_bai_tap` chỉ hiển thị khi học viên chọn. |
+| [Ảnh 1 — ca §3.3](prototype/anh-1-tai-lieu-sai-sec3-3.png) | Trang học liệu đánh dấu câu sai; chat trích §3.3, nêu phản ví dụ và cho gửi TA. | ① HAX G1/G2; ② HAX G11 / PAIR Explainability; ④ HAX G9 / PAIR Graceful Failure. | `tra_cuu_tai_lieu` tự làm; chặn `dang_FAQ` cho nội dung chưa xác minh. |
+| [Ảnh 2 — ca TA ngoài giờ](prototype/anh-2-ta-ngoai-gio.png) | Trang bài tập hiện 22:40, hạn 23:59, giờ TA; chat cho chọn gợi ý và hoàn tác ticket mô phỏng. | ① HAX G1/G2; ③ HAX G8; ④ HAX G9 / PAIR Graceful Failure. | `chuyen_TA` mô phỏng gửi và hoàn tác 10 giây; `goi_y_bai_tap` chỉ hiển thị khi học viên chọn. |
 
 **Ảnh 1 — Cảnh báo tài liệu §3.3 sai**
 
-![Ảnh 1: Prototype cảnh báo câu sai trong tài liệu §3.3, nêu phản ví dụ và cho chuyển TA](prototype/anh-1-tai-lieu-sai-sec3-3.png)
+![Ảnh 1: Học liệu §3.3 và trợ lý cảnh báo câu sai, hiển thị chú thích HAX/PAIR](prototype/anh-1-tai-lieu-sai-sec3-3.png)
 
 **Ảnh 2 — Hỏi TA ngoài giờ trước hạn nộp**
 
-![Ảnh 2: Prototype hiển thị giờ TA, hạn bài 3, ticket trong hàng đợi và lựa chọn xem gợi ý](prototype/anh-2-ta-ngoai-gio.png)
+![Ảnh 2: Bài tập 3 trước hạn, TA ngoài giờ, lựa chọn gợi ý và nút hoàn tác ticket](prototype/anh-2-ta-ngoai-gio.png)
 
 ## §6. Tốt là gì
 
@@ -310,7 +310,7 @@ Lời hứa này quá rộng, khiến học viên kỳ vọng AI luôn có câu 
 | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **1. Không khẳng định điều thiếu căn cứ hoặc căn cứ đang tranh chấp; không hứa điều tool không làm được** | **Pass.** Thẻ "Cảnh báo của trợ lý" nêu phản ví dụ σ² = 0,25 → σ = 0,5 > 0,25, kết luận không thể nói "luôn nhỏ hơn"; Có gợi ý cho học viên là "Bạn nên gửi câu hỏi này cho TA/Giảng viên", không hứa đã báo ai. | **Pass trong bản mô phỏng.** Ticket hiện "xử lý vào 08:00 sáng mai", không hứa TA trả lời trước hạn; chưa gửi cho TA thật.                                                                                                  |
 | **2. Trạng thái trên màn hình khớp với hành động mô phỏng**                                                  | **Pass.** Có thông báo "Đã chặn đăng FAQ" và quy tắc `dang_FAQ`, khớp thiết kế.                                                                                                                                                              | **Pass trong bản mô phỏng.** Thẻ "Hiện tại 22:40. Ticket gửi đi sẽ được xử lý vào 08:00 sáng mai"; ticket #TA-8841 ghi "Thời gian nhận hỗ trợ: 08:00 sáng mai"; không có trạng thái "TA đang trả lời"; đồng hồ ghi "Đã nghỉ". |
-| **3. Học viên có bước tiếp theo làm được ngay và biết rõ ai được báo, khi nào**                                | **Pass.** Có nút "Gửi câu hỏi này cho TA (Chuyển TA)", thanh "Hoàn tác trong 5s" và giờ TA ở thanh trên cùng.                                                                                                                                | **Pass.** Có nút "Xem gợi ý bước 1" và "Bỏ qua"; ticket ghi rõ đã vào hàng đợi TA và thời gian nhận 08:00.                                                                                                              |
+| **3. Học viên có bước tiếp theo làm được ngay và biết rõ ai được báo, khi nào**                                | **Pass.** Có nút "Gửi câu hỏi này cho TA (Chuyển TA)", khi bấm sẽ hiện nút "Hoàn tác" trong 10 giây và giờ TA ở thanh trên cùng.                                                                                                                                | **Pass.** Có nút "Xem gợi ý bước 1" và "Bỏ qua"; ticket ghi rõ đã vào hàng đợi TA và thời gian nhận 08:00.                                                                                                              |
 
 - **Lỗi còn lại:** Ticket TA và nút hoàn tác 10 giây mới được mô phỏng trên trình duyệt, chưa có hàng đợi TA thật. Cảnh báo lỗi §3.3 là kịch bản viết sẵn; prototype chưa tự phát hiện các lỗi khác trong tài liệu.
 
