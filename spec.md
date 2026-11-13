@@ -1,6 +1,6 @@
 # Bài nộp LAB5 — [Track] · Nhóm [Tên nhóm]
 
-**Lớp:** [L3A/L3B] · **Bàn / zone:** [điền] · **Track:** [T1–T5]
+**Lớp:** [L3B] · **Bàn / zone:** [điền] · **Track:** [T2]
 
 ## Thành viên nhóm
 
