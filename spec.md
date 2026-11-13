@@ -6,10 +6,10 @@
 
 | Họ và tên | Mã học viên | Việc đã làm |
 |---|---|---|
-| Hoàng Đức An | 2A202603800 |  |
-| Mai Lê Bá Vương | 2A202603872 |  |
-| Đỗ Quốc Khánh |  |  |
-| Vương Quang Thắng |  |  |
+| Đỗ Quốc Khánh |  | §1 lát cắt và phạm vi; điều phối, rà soát toàn bài; trình bày mở đầu demo §7. |
+| Hoàng Đức An | 2A202603800 | §2 kịch bản rủi ro và §6 tiêu chí Pass/Fail; trình bày rủi ro trong demo §7. |
+| Mai Lê Bá Vương | 2A202603872 | §3 UX khi AI sai; thiết kế nội dung và thao tác cho prototype §5; trình bày phản hồi AI trong demo §7. |
+| Vương Quang Thắng |  | §4 mức tự chủ; dựng prototype §5; bấm prototype và giải thích mức tự chủ trong demo §7. |
 
 ## §1. Lát cắt & phạm vi
 
@@ -317,10 +317,11 @@ Lời hứa này quá rộng, khiến học viên kỳ vọng AI luôn có câu 
 
 ## §7. Demo
 
-- **Ca lạ nhận được:**
-- **Prototype đã làm gì / nhóm trả lời ra sao:**
-- **Nhóm có đổi ý sau ca đó không? Vì sao?:**
+- **Ca lạ nhận được:** “Bài tập 3 có mức lương 45 triệu, khác hẳn các số còn lại. Em bỏ số 45 đi rồi tính để nộp nhé?” Đây là yêu cầu quyết định cách xử lý giá trị ngoại lai trong bài đang mở, ngoài hai ca #3 và #8 đã dựng sẵn.
+- **Prototype đã làm gì / nhóm trả lời ra sao:** Prototype chưa có nhánh bấm riêng cho câu này, nên nhóm trình bày cách trợ lý sẽ xử lý theo mức tự chủ đã đặt: `tra_cuu_tai_lieu` lấy §3.4, nơi yêu cầu kiểm tra giá trị ngoại lai là lỗi nhập liệu hay dữ liệu thật trước khi bỏ. AI hỏi “Bạn có căn cứ nào cho thấy 45 triệu là lỗi nhập liệu không?”; không bảo bỏ số 45, không xác nhận cách tính hay đáp số để nộp. Nếu học viên muốn trợ giúp, `goi_y_bai_tap` chỉ hiện gợi ý bước đầu khi học viên chọn xem. Nếu học viên yêu cầu chuyển TA, AI nói rõ giờ TA 08:00–22:00 và trạng thái hàng chờ, không hứa phản hồi trước hạn.
+- **Nhóm có đổi ý sau ca đó không? Vì sao?:** Nhóm giữ nguyên mức tự chủ của các tool: tra cứu được tự làm, gợi ý cần học viên chọn xem, còn việc quyết định bỏ dữ liệu không thuộc quyền AI. Nhóm ghi nhận cần bổ sung một nhánh hỏi lại về nguồn gốc giá trị ngoại lai trong prototype để người học không hiểu câu trả lời chung là lời xác nhận cách nộp bài.
 - **Phần trình bày của từng thành viên:**
-  - Thành viên 1:
-  - Thành viên 2:
-  - Thành viên 3:
+  - Thành viên 1: giới thiệu lát cắt, phạm vi và câu hỏi của nhóm khác.
+  - Thành viên 2: chỉ ra rủi ro học viên bỏ dữ liệu thật, dẫn §3.4 và bài tập 3 đang mở.
+  - Thành viên 3: nói câu AI phản hồi, bước hỏi lại và giới hạn không xác nhận đáp số.
+  - Thành viên 4: giải thích mức tự chủ của `tra_cuu_tai_lieu`, `goi_y_bai_tap`, `chuyen_TA` và thao tác hiện có trên prototype.
